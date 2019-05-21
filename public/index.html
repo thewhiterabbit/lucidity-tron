@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="vue-ui-dark-mode">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="<%= BASE_URL %>favicon.png" />
+    <title>Lucidity - OMOFOMO.io</title>
+    <style type="text/css">
+      html {
+        color: #fff;
+        background-color: #1d2935;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        background-image: url("<%= BASE_URL %>favicon.png");
+        background-position: center;
+        background-size: cover;
+        margin: 100px auto;
+        -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-rotateplane {
+        0% {
+          -webkit-transform: perspective(120px);
+        }
+        50% {
+          -webkit-transform: perspective(120px) rotateY(180deg);
+        }
+        100% {
+          -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+        }
+      }
+
+      @keyframes sk-rotateplane {
+        0% {
+          transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+          -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        }
+        50% {
+          transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+          -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        }
+        100% {
+          transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+          -webkit-transform: perspective(120px) rotateX(-180deg)
+            rotateY(-179.9deg);
+        }
+      }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-127855339-1"
+    ></script>
+    <script>
+      window.GA_TRACKING_ID = "UA-127855339-1";
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", GA_TRACKING_ID, {
+        app_name: "Monitive omofomo.io",
+        send_page_view: false
+      });
+    </script>
+  </head>
+
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but omofomo.io doesn't work properly without
+        JavaScript enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app">
+      <div class="spinner"></div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
